@@ -26,14 +26,13 @@ class MainActivity : AppCompatActivity() {
     val btn = v as Button
         //get Buttons tag
         when (btn.tag.toString()){
+        //Apply numbers with their tag
             "0","1","2","3","4","5","6","7","8","9","."->{
                 var content:String = editText?.text.toString()
                 //Set Text with buttons tag
                 editText?.setText(content+btn.tag.toString())
             }
-        }
         //Apply operations
-        when(btn.tag.toString()){
          "+"->{
              opration = "+"
              firstInput = editText?.text.toString()
